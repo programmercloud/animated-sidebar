@@ -2,8 +2,6 @@ $(".toggle").click(function () {
   $(".navigation").toggleClass("active");
 });
 
-const body = document.querySelector("body");
-
 $(".theme").click(function () {
   $(".theme").removeClass("select");
   $(this).addClass("select");
