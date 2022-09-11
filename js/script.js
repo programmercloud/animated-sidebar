@@ -17,7 +17,7 @@ $(".dark").click(function () {
 
 $(".light").click(function () {
   $("body").removeClass("purpled");
-  $("body").removeClass("dark");
+  $("body").removeClass("darked");
   $("body").addClass("lighted");
 });
 
