@@ -104,26 +104,24 @@ body {
   background: none;
 }
 
-.navigation ul li:not(:first-child):hover::before {
+.navigation ul li:not(:first-child):hover::before,
+.navigation ul li:not(:first-child):hover::after{
   content: "";
   position: absolute;
-  top: -20px;
   right: 0;
   width: 20px;
   height: 20px;
   background: transparent;
+}
+
+.navigation ul li:not(:first-child):hover::before{
+  top: -20px;
   border-bottom-right-radius: 20px;
   box-shadow: 7.5px 7.5px 0 7.5px #c17aff;
 }
 
 .navigation ul li:not(:first-child):hover::after {
-  content: "";
-  position: absolute;
   bottom: -20px;
-  right: 0;
-  width: 20px;
-  height: 20px;
-  background: transparent;
   border-top-right-radius: 20px;
   box-shadow: 7.5px -7.5px 0 7.5px #c17aff;
 }
