@@ -35,7 +35,7 @@ body {
   width: 50px;
   height: 50px;
   background: #c17aff;
-  border-radius: 50px;
+  border-radius: 50%;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
   cursor: pointer;
   display: flex;
@@ -48,17 +48,7 @@ body {
   transition: all 0.3s ease;
 }
 
-.toggle::before {
-  content: "";
-  position: absolute;
-  width: 26px;
-  height: 3px;
-  border-radius: 3px;
-  background: #282828;
-  transform: translateY(-5px);
-  transition: 1s;
-}
-
+.toggle::before,
 .toggle::after {
   content: "";
   position: absolute;
@@ -66,8 +56,15 @@ body {
   height: 3px;
   border-radius: 3px;
   background: #282828;
-  transform: translateY(5px);
   transition: 1s;
+}
+
+.toggle::before {
+  transform: translateY(-5px);
+}
+
+.toggle::after {
+  transform: translateY(5px);
 }
 
 .navigation.active .toggle::before {
@@ -105,7 +102,7 @@ body {
 }
 
 .navigation ul li:not(:first-child):hover::before,
-.navigation ul li:not(:first-child):hover::after{
+.navigation ul li:not(:first-child):hover::after {
   content: "";
   position: absolute;
   right: 0;
@@ -114,7 +111,7 @@ body {
   background: transparent;
 }
 
-.navigation ul li:not(:first-child):hover::before{
+.navigation ul li:not(:first-child):hover::before {
   top: -20px;
   border-bottom-right-radius: 20px;
   box-shadow: 7.5px 7.5px 0 7.5px #c17aff;
@@ -128,11 +125,9 @@ body {
 
 .navigation ul li a {
   position: relative;
-  display: block;
   width: 100%;
   display: flex;
   text-decoration: none;
-  text-transform: uppercase;
   color: #c17aff;
   font-weight: 400;
 }
@@ -225,11 +220,6 @@ body {
   }
 }
 
-.activeTheme {
-  border-color: blue;
-  box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.45);
-}
-
 body.darked {
   background-color: #111;
 }
@@ -277,7 +267,7 @@ body.purpled .navigation ul li a {
 }
 
 body.purpled .navigation ul li:not(:first-child):hover {
-  background: #f1f1ff;
+  background: #f1f1f1;
 }
 
 body.purpled .navigation ul li:not(:first-child):hover a {
